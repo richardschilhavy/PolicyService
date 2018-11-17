@@ -13,8 +13,8 @@ import java.time.LocalDate;
 public class PolicyServiceController {
 
     // xTODO inject and autowire repository
-    //@Autowired
-    //private PolicyRepository repository;
+    @Autowired
+    PolicyRepository repository;
 
     // xTODO Create One Policy (POST)
 
@@ -33,15 +33,14 @@ public class PolicyServiceController {
     public Policy getNewPolicy()
     {
         // initalized policy
-        Policy p = new Policy (
+        return new Policy (
                 1233456L,
                 "John",
                 "Smith",
                 LocalDate.of(2018,11,16),
                 LocalDate.of(2019,11,16),
                 BigDecimal.valueOf(125.5)
-                );
-        return p;
+        );
 
         // new Policy
     }
