@@ -10,11 +10,8 @@ import java.util.Currency;
 import java.util.Locale;
 
 @Entity
-@Data
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @ToString
 public class Policy {
 
@@ -28,8 +25,10 @@ public class Policy {
     private BigDecimal deductible;
     private final Currency usd = Currency.getInstance(Locale.US);
 
+    public Policy () {}
+
     // explicit constructor
-/*    public Policy (Long policyNo, String firstName, String lastName, LocalDate startDate, LocalDate endDate, BigDecimal deductible)
+    public Policy (Long policyNo, String firstName, String lastName, LocalDate startDate, LocalDate endDate, BigDecimal deductible)
     {
         this.policyNo = policyNo;
         this.firstName = firstName;
@@ -37,7 +36,7 @@ public class Policy {
         this.startDate = startDate;
         this.endDate = endDate;
         this.deductible = deductible;
-    }*/
+    }
 
     // explicit constructor with Strings for complex datatypes
     public Policy (Long policyNo, String firstName, String lastName, String startDate, String endDate, String deductible)
