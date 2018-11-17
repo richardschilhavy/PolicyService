@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS Policy
+CREATE TABLE POLICY_DETAILS
 (
     policyNo bigint not null primary key,
     firstName varchar(50) not null,

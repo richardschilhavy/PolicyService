@@ -39,8 +39,7 @@ public class Policy {
     }
 
     // explicit constructor with Strings for complex datatypes
-    public Policy (Long policyNo, String firstName, String lastName, String startDate, String endDate, String deductible)
-    {
+    public Policy (Long policyNo, String firstName, String lastName, String startDate, String endDate, String deductible) {
         this(policyNo, firstName, lastName, LocalDate.parse(startDate), LocalDate.parse(endDate), new BigDecimal(deductible));
     }
 }
