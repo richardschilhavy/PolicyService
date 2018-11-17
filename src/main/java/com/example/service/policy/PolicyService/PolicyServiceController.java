@@ -14,14 +14,14 @@ public class PolicyServiceController {
 
     // xTODO inject and autowire repository
     @Autowired
-    PolicyRepository repository;
+    private PolicyRepository repository;
 
     // xTODO Create One Policy (POST)
 
     @PostMapping("/policy")
     public String addPolicy(@RequestBody Policy policy)
     {
-        //repository.addPolicy(policy);
+        repository.save(policy);
         return "Policy " + policy.getPolicyNo() + " saved.";
     }
 

@@ -53,4 +53,6 @@ A RESTful microservice for a insurance policy
     - Renamed data.sql to data-h2.sql
     - Added JDBC Dependency to populate with *.sql files
     - Not working...
-- TODO Create Repository and link to controller
+- x TODO Create Repository and link to controller
+    - Build failure using @Autowired with @Repository on interface
+    - Created default implementaiton for @Repository directive 
