@@ -45,6 +45,9 @@ A RESTful microservice for a insurance policy
 |  | UPDATE | ? | /policy/{policyNo} |
 |  | DELETE | ? | /policy/{policyNo} |
 
+### PolicyService
+
+- TODO Create PolicyService as wrapper for repository
 
 ### H2 Database
 

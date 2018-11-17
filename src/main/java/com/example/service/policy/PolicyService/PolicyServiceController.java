@@ -9,21 +9,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.logging.Logger;
 
 @RestController
 public class PolicyServiceController {
 
-    // xTODO inject and autowire repository
     @Autowired
-    private PolicyRepository repository;
+    private PolicyService policyService;
 
     // xTODO Create One Policy (POST)
 
     @PostMapping("/policy")
     public String addPolicy(@RequestBody Policy policy)
     {
-        repository.save(policy);
+        policyService.save(policy);
         return "Policy saved: \n" + policy.toString();
     }
 

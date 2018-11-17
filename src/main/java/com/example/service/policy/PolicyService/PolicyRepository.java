@@ -9,10 +9,8 @@ public interface PolicyRepository extends CrudRepository<Policy, Long>
 {
 
 }
-
 @Repository
-class PolicyRepositoryImpl implements PolicyRepository
-{
+class PolicyRepositoryImpl implements PolicyRepository {
     @Override
     public <S extends Policy> S save(S entity) {
         return null;
