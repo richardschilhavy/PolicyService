@@ -1,5 +1,6 @@
 package com.example.service.policy.PolicyService;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.logging.Logger;
 
 @RestController
 public class PolicyServiceController {
@@ -22,7 +24,7 @@ public class PolicyServiceController {
     public String addPolicy(@RequestBody Policy policy)
     {
         repository.save(policy);
-        return "Policy " + policy.getPolicyNo() + " saved.";
+        return "Policy saved: \n" + policy.toString();
     }
 
     // TODO Create Many Policies (POST)
