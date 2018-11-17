@@ -19,8 +19,6 @@ public class PolicyServiceController {
     @Autowired
     private PolicyRepository policyRepository;
 
-    // xTODO Create One Policy (POST)
-
     @PostMapping("/policy")
     public String addPolicy(@RequestBody Policy policy)
     {
@@ -51,7 +49,7 @@ public class PolicyServiceController {
     // TODO Read Many Policy (GET)
 
     @GetMapping("/policies")
-    public Iterable<Policy> getAllPolicies()
+    public List<Policy> getAllPolicies()
     {
         return this.policyRepository.findAll();
     }

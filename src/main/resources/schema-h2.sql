@@ -1,10 +1,9 @@
-CREATE TABLE IF NOT EXISTS POLICY
+create table if not exists policy
 (
-    policyNo bigint not null primary key,
-    firstName varchar(50) not null,
-    lastName varchar(50) not null,
-    startDate timestamp not null,
-    endDate timestamp not null,
-    deductible numeric(10,2) not null,
-    currencyType varchar(10) not null
+    policy_no bigint not null primary key,
+    first_name varchar(50) not null,
+    last_name varchar(50) not null,
+    start_date date not null,
+    end_date date not null,
+    deductible decimal(20,2) not null
 );
