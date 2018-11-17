@@ -16,9 +16,21 @@ A RESTful microservice for a insurance policy
 
 ## Tasks
 
-- TODO Create the Policy class
-  - TODO Define unique policy number (surrogate integer, serialized?)
-  - TODO Define first/last name as Strings
-  - TODO Define start and end date using LocalDate class
-  - TODO Define deductible value using Currency class and USD denomination
+### Policy Model
+
+- x TODO Create the Policy class
+  - x TODO Define unique policy number (surrogate integer, serialized?)
+  - x TODO Define first/last name as Strings
+  - x TODO Define start and end date using LocalDate class
+  - x TODO Define deductible value using Currency class and USD denomination
 - TODO Create test case for Policy Class
+
+### REST Service Controller
+
+- TODO Connect
+
+### H2 Database
+
+- x TODO Install and Connect to H2
+- TODO Initialize Policy Table
+- TODO Initialize Policy Data
