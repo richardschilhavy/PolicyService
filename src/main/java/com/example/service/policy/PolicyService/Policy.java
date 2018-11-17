@@ -7,15 +7,12 @@ import lombok.ToString;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.ws.rs.ConstrainedTo;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Currency;
 import java.util.Locale;
 
 @Entity
-@Table(name = "policy")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -47,9 +44,5 @@ public class Policy {
     public Policy (Long policyNo, String firstName, String lastName, String startDate, String endDate, String deductible)
     {
         this(policyNo, firstName, lastName, LocalDate.parse(startDate), LocalDate.parse(endDate), new BigDecimal(deductible));
-    }
-
-    @Override public String toString() {
-        return "I'm a Policy";
     }
 }

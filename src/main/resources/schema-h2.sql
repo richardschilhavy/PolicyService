@@ -1,3 +1,4 @@
+/*
 create table policy
 (
     policyNo integer not null,
@@ -8,3 +9,4 @@ create table policy
     deductible numeric(10,2) not null,
     primary key (policyNo)
 );
+*/
