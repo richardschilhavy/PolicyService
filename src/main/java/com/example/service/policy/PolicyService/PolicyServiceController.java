@@ -1,6 +1,5 @@
 package com.example.service.policy.PolicyService;
 
-import lombok.EqualsAndHashCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,14 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.List;
 
 @RestController
 public class PolicyServiceController {
 
     // xTODO inject and autowire repository
-    @Autowired
-    private PolicyRepository repository;
+   /* @Autowired
+    private PolicyRepositoryInterface repository;*/
 
     // xTODO Create One Policy (POST)
 
