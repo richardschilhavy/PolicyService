@@ -23,7 +23,7 @@ public class PolicyServiceController {
     @PostMapping("/policy")
     public String addPolicy(@RequestBody Policy policy)
     {
-        repository.save(policy);
+        repository.addPolicy(policy);
         return "Policy " + policy.getPolicyNo() + " saved.";
     }
 
