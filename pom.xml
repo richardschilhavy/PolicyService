@@ -10,6 +10,7 @@
 
 	<name>PolicyService</name>
 	<description>Demo project for Spring Boot</description>
+	<url>localhost:8080/PolicyService/</url>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -62,6 +63,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.2</version>
+				<configuration>
+					<webappDirectory>$CATALINA_HOME/webapps</webappDirectory>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
