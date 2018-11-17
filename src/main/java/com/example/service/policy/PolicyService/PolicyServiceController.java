@@ -15,15 +15,15 @@ import java.util.List;
 public class PolicyServiceController {
 
     // xTODO inject and autowire repository
-    @Autowired
-    private PolicyRepository repository;
+    //@Autowired
+    //private PolicyRepository repository;
 
     // xTODO Create One Policy (POST)
 
     @PostMapping("/policy")
     public String addPolicy(@RequestBody Policy policy)
     {
-        repository.addPolicy(policy);
+        //repository.addPolicy(policy);
         return "Policy " + policy.getPolicyNo() + " saved.";
     }
 
@@ -50,11 +50,11 @@ public class PolicyServiceController {
 
     // TODO Read Many Policy (GET)
 
-    @GetMapping("/policies")
+/*    @GetMapping("/policies")
     public List<Policy> getAllPolicies()
     {
             return this.repository.findAll();
-    }
+    }*/
 
     // TODO Update One Policy (PUT)
 
