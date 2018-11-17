@@ -4,12 +4,14 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Currency;
 import java.util.Locale;
 
 @Entity
+@Table(name="POLICY")
 @Getter
 @Setter
 @ToString
@@ -23,7 +25,7 @@ public class Policy {
     private LocalDate startDate;
     private LocalDate endDate;
     private BigDecimal deductible;
-    private final Currency usd = Currency.getInstance(Locale.US);
+    private final Currency currencyType = Currency.getInstance(Locale.US);
 
     public Policy () {}
 

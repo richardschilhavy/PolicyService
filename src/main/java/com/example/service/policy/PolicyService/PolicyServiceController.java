@@ -9,19 +9,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 @RestController
 public class PolicyServiceController {
 
     @Autowired
-    private PolicyService policyService;
+    private PolicyRepository policyRepository;
 
     // xTODO Create One Policy (POST)
 
     @PostMapping("/policy")
     public String addPolicy(@RequestBody Policy policy)
     {
-        policyService.save(policy);
+        policyRepository.save(policy);
         return "Policy saved: \n" + policy.toString();
     }
 
@@ -47,11 +50,11 @@ public class PolicyServiceController {
 
     // TODO Read Many Policy (GET)
 
-/*    @GetMapping("/policies")
-    public List<Policy> getAllPolicies()
+    @GetMapping("/policies")
+    public Iterable<Policy> getAllPolicies()
     {
-            return this.repository.findAll();
-    }*/
+        return this.policyRepository.findAll();
+    }
 
     // TODO Update One Policy (PUT)
 
