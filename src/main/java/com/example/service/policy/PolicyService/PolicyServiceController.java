@@ -15,8 +15,8 @@ import java.util.List;
 public class PolicyServiceController {
 
     // xTODO inject and autowire repository
-    //@Autowired
-    //private PolicyRepository repository;
+    @Autowired
+    private PolicyRepository repository;
 
     // xTODO Create One Policy (POST)
 
