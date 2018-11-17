@@ -1,7 +1,7 @@
 /*
 create table policy
 (
-    policyNo integer not null,
+    policyNo bigint not null,
     firstName varchar(50) not null,
     lastName varchar(50) not null,
     startDate date not null,

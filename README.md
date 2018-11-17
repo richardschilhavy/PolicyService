@@ -30,12 +30,27 @@ A RESTful microservice for a insurance policy
 
 - x TODO Create web server (Tomcat)
 - x TODO Test connection to Rest Controller
-- Added Jackson to marshall objects into JSON
+    - Added Jackson to marshall objects into JSON
+   
+### REST CRUD Services
+
+| Complete | CRUD | Method | URL |
+|:--------:|:-----|:-------|:----|
+|  | CREATE | POST | /policy |
+|  | CREATE | POST | /policy |
+|  | READ | GET | /policy/{policyNo} |
+|  | READ | GET | /policies |
+|  | READ | GET | /policies/{lastName} |
+|  | READ | GET | /policies/{startdate}/{endDate} |
+|  | UPDATE | ? | /policy/{policyNo} |
+|  | DELETE | ? | /policy/{policyNo} |
+
 
 ### H2 Database
 
 - x TODO Install and Connect to H2
+- TODO Initialize Policy Table & Data
     - Renamed data.sql to data-h2.sql
     - Added JDBC Dependency to populate with *.sql files
-- TODO Initialize Policy Table
-- TODO Initialize Policy Data
+    - Not working...
+- TODO Create Repository and link to controller
