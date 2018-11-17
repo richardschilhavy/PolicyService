@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PolicyServiceController {
 
     @GetMapping("/policy")
-    Policy newPolicy() {
-        return new Policy();
+    public String sayHello() {
+        return "Hello World";
     }
 }
