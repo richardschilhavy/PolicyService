@@ -23,14 +23,19 @@ A RESTful microservice for a insurance policy
   - x TODO Define first/last name as Strings
   - x TODO Define start and end date using LocalDate class
   - x TODO Define deductible value using Currency class and USD denomination
+  - Added Lombok to skill getters/setters/toString
 - TODO Create test case for Policy Class
 
 ### REST Service Controller
 
-- TODO Connect
+- x TODO Create web server (Tomcat)
+- x TODO Test connection to Rest Controller
+- Added Jackson to marshall objects into JSON
 
 ### H2 Database
 
 - x TODO Install and Connect to H2
+    - Renamed data.sql to data-h2.sql
+    - Added JDBC Dependency to populate with *.sql files
 - TODO Initialize Policy Table
 - TODO Initialize Policy Data
