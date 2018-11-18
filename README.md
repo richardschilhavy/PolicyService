@@ -36,26 +36,18 @@ A RESTful microservice for a insurance policy
 
 | Complete | CRUD | Method | URL |
 |:--------:|:-----|:-------|:----|
-|  | CREATE | POST | /policy |
-|  | CREATE | POST | /policy |
+| x | CREATE | POST | /policy |
 |  | READ | GET | /policy/{policyNo} |
-|  | READ | GET | /policies |
+| x | READ | GET | /policies |
 |  | READ | GET | /policies/{lastName} |
 |  | READ | GET | /policies/{startdate}/{endDate} |
-|  | UPDATE | ? | /policy/{policyNo} |
-|  | DELETE | ? | /policy/{policyNo} |
-
-### PolicyService
-
-- TODO Create PolicyService as wrapper for repository
+|  | UPDATE | PUT | /policies/{policyNo} |
+|  | DELETE | DELETE | /policies/{policyNo} |
 
 ### H2 Database
 
 - x TODO Install and Connect to H2
-- TODO Initialize Policy Table & Data
+- x TODO Initialize Policy Table & Data
     - Renamed data.sql to data-h2.sql
     - Added JDBC Dependency to populate with *.sql files
-    - Not working...
 - x TODO Create Repository and link to controller
-    - Build failure using @Autowired with @Repository on interface
-    - Created default implementaiton for @Repository directive 
