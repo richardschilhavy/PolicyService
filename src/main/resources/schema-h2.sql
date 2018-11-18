@@ -5,5 +5,6 @@ create table if not exists policy
     last_name varchar(50) not null,
     start_date date not null,
     end_date date not null,
-    deductible decimal(20,2) not null
+    deductible decimal(20,2) not null,
+    currency_type char(3) not null -- all currency codes are three letters/digits
 );

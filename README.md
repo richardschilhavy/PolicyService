@@ -14,6 +14,12 @@ A RESTful microservice for a insurance policy
 - Commit the initial project setup, and subsequent enhancements to a GitHub repository, with public view access
 - Feel free to make any notes of assumptions as needed
 
+## Assumptions
+
+- Policy numbers are pre-existing and therefore not auto-generated, generated programmatically on front-end on policy creation
+- JSON is the standard format for object representation
+- Most validation is performed on the front end. Added example to showcase input validation into API
+
 ## Tasks
 
 ### Policy Model
@@ -31,31 +37,24 @@ A RESTful microservice for a insurance policy
 - x TODO Create web server (Tomcat)
 - x TODO Test connection to Rest Controller
     - Added Jackson to marshall objects into JSON
+- TODO Add validation of PUT/PUSH... Embed in model?
    
 ### REST CRUD Services
 
 | Complete | CRUD | Method | URL |
 |:--------:|:-----|:-------|:----|
-|  | CREATE | POST | /policy |
-|  | CREATE | POST | /policy |
-|  | READ | GET | /policy/{policyNo} |
-|  | READ | GET | /policies |
+| x | CREATE | POST | /policies |
+|  | READ | GET | /policies/{policyNo} |
+| x | READ | GET | /policies |
 |  | READ | GET | /policies/{lastName} |
 |  | READ | GET | /policies/{startdate}/{endDate} |
-|  | UPDATE | ? | /policy/{policyNo} |
-|  | DELETE | ? | /policy/{policyNo} |
-
-### PolicyService
-
-- TODO Create PolicyService as wrapper for repository
+|  | UPDATE | PUT | /policies/{policyNo} |
+|  | DELETE | DELETE | /policies/{policyNo} |
 
 ### H2 Database
 
 - x TODO Install and Connect to H2
-- TODO Initialize Policy Table & Data
+- x TODO Initialize Policy Table & Data
     - Renamed data.sql to data-h2.sql
     - Added JDBC Dependency to populate with *.sql files
-    - Not working...
 - x TODO Create Repository and link to controller
-    - Build failure using @Autowired with @Repository on interface
-    - Created default implementaiton for @Repository directive 
