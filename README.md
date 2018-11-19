@@ -2,6 +2,14 @@
 
 A RESTful microservice for a insurance policy
 
+## Build Details
+
+- Tomcat 9.x as local server for testing
+- Maven build processor to resolve dependencies (e.g. Spring, Rest, H2, Lombok)
+- Enable Annotation Processing AND install Lombok plugin
+- Build to WAR file, then copied to to tomcat/webapps
+- See REST CRUD Services for details on using API
+
 ## Requirements
 
 - Use Spring Boot and Java to create a RESTful CrUD microservice, backed by an in-memory H2 database
