@@ -54,9 +54,9 @@ A RESTful microservice for a insurance policy
 | x | READ | GET | /policies/{policyNo} | Returns one policy using policy number |
 | x | READ | GET | /policies | Returns all policies |
 | x | READ | GET | /policies/lastname/{lastName} | Returns one or more policies with matching last name |
-| x | READ | GET | /policies/date/{startdate}/{endDate} | |
+| x | READ | GET | /policies/date/{startdate}/{endDate} | Returns one or more policies with enddate between two dates | |
 | x | UPDATE | PUT | /policies/{policyNo} | Updates existing policy with one Policy JSON object |
-| x | DELETE | DELETE | /policies/{policyNo} | Delet
+| x | DELETE | DELETE | /policies/{policyNo} | Delete policy using policy number |
 
 ### H2 Database
 
