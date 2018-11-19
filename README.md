@@ -18,7 +18,14 @@ A RESTful microservice for a insurance policy
 
 - Policy numbers are pre-existing and therefore not auto-generated, generated programmatically on front-end on policy creation
 - JSON is the standard format for object representation
-- Most validation is performed on the front end. Added example to showcase input validation into API
+- Most validation is performed on the front end.
+
+## Future Improvements
+
+- Add annotation validations to model 
+- Add annotation to validate RequestBody
+- Add/modify CREATE service to support multiple policies in same request
+- Expand on READ services for sorting, similarity (e.g. LIKE)
 
 ## Tasks
 
@@ -30,26 +37,26 @@ A RESTful microservice for a insurance policy
   - x TODO Define start and end date using LocalDate class
   - x TODO Define deductible value using Currency class and USD denomination
   - Added Lombok to skill getters/setters/toString
-- TODO Create test case for Policy Class
+- TODO Add validation to Policy class
+- TODO Create test case for Policy class
 
 ### REST Service Controller
 
 - x TODO Create web server (Tomcat)
 - x TODO Test connection to Rest Controller
     - Added Jackson to marshall objects into JSON
-- TODO Add validation of PUT/PUSH... Embed in model?
    
 ### REST CRUD Services
 
 | Complete | CRUD | Method | URL | Description |
 |:--------:|:-----|:-------|:----|:------------|
 | x | CREATE | POST | /policies | Adds one or more policies as Policy JSON object array |
-| x  | READ | GET | /policies/{policyNo} | Returns one policy using policy number |
+| x | READ | GET | /policies/{policyNo} | Returns one policy using policy number |
 | x | READ | GET | /policies | Returns all policies |
-| x  | READ | GET | /policies/lastname/{lastName} | Returns one or more policies with matching last name |
-|  | READ | GET | /policies/date/{startdate}/{endDate} | |
+| x | READ | GET | /policies/lastname/{lastName} | Returns one or more policies with matching last name |
+| x | READ | GET | /policies/date/{startdate}/{endDate} | |
 | x | UPDATE | PUT | /policies/{policyNo} | Updates existing policy with one Policy JSON object |
-|  | DELETE | DELETE | /policies/{policyNo} | Delet
+| x | DELETE | DELETE | /policies/{policyNo} | Delet
 
 ### H2 Database
 

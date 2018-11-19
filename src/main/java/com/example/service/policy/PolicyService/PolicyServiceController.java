@@ -18,8 +18,6 @@ public class PolicyServiceController {
     @PostMapping("/policies")
     @ResponseBody
     public String savePolicy(@RequestBody Policy policy) {
-        // TODO Modify to support one or MORE policies
-
         if (policyRepository.findById(policy.getPolicyNo()).isPresent()) {
             return "Conflicting policyNo " + policy.getPolicyNo() + " found.";
         }
@@ -54,8 +52,6 @@ public class PolicyServiceController {
     @GetMapping("/policies/date/{firstDate}/{lastDate}")
     @ResponseBody
     public List<Policy> getPolicy(@PathVariable("firstDate") String firstDate, @PathVariable("lastDate") String lastDate) {
-
-        // same as above
         return policyRepository.findByEndDateBetween(LocalDate.parse(firstDate), LocalDate.parse(lastDate));
     }
 

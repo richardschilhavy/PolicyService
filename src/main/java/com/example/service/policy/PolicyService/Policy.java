@@ -3,7 +3,8 @@ package com.example.service.policy.PolicyService;
 import lombok.*;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;import java.math.BigDecimal;
+import javax.persistence.Id;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
