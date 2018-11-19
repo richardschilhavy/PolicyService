@@ -22,6 +22,7 @@ A RESTful microservice for a insurance policy
 
 ## Future Improvements
 
+- Add Logger to PolicyServiceController classs
 - Add annotation validations to model 
 - Add annotation to validate RequestBody
 - Add/modify CREATE service to support multiple policies in same request
