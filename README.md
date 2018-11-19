@@ -41,15 +41,15 @@ A RESTful microservice for a insurance policy
    
 ### REST CRUD Services
 
-| Complete | CRUD | Method | URL |
-|:--------:|:-----|:-------|:----|
-| x | CREATE | POST | /policies |
-|  | READ | GET | /policies/{policyNo} |
-| x | READ | GET | /policies |
-|  | READ | GET | /policies/{lastName} |
-|  | READ | GET | /policies/{startdate}/{endDate} |
-|  | UPDATE | PUT | /policies/{policyNo} |
-|  | DELETE | DELETE | /policies/{policyNo} |
+| Complete | CRUD | Method | URL | Description |
+|:--------:|:-----|:-------|:----|:------------|
+| x | CREATE | POST | /policies | Adds one or more policies as Policy JSON object array |
+| x  | READ | GET | /policies/{policyNo} | Returns one policy using policy number |
+| x | READ | GET | /policies | Returns all policies |
+| x  | READ | GET | /policies/lastname/{lastName} | Returns one or more policies with matching last name |
+|  | READ | GET | /policies/date/{startdate}/{endDate} | |
+| x | UPDATE | PUT | /policies/{policyNo} | Updates existing policy with one Policy JSON object |
+|  | DELETE | DELETE | /policies/{policyNo} | Delet
 
 ### H2 Database
 
